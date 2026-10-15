@@ -1543,6 +1543,69 @@ public final class Keys {
             "en_US");
 
     /**
+     * Webhook notification target URL. Events are sent as JSON POST requests.
+     */
+    public static final ConfigKey<String> NOTIFICATOR_WEBHOOK_URL = new StringConfigKey(
+            "notificator.webhook.url",
+            List.of(KeyType.CONFIG));
+
+    /**
+     * Webhook authentication type. Supported values are "x-api-key", "bearer", "basic" and "custom".
+     */
+    public static final ConfigKey<String> NOTIFICATOR_WEBHOOK_AUTH_TYPE = new StringConfigKey(
+            "notificator.webhook.authType",
+            List.of(KeyType.CONFIG));
+
+    /**
+     * Header name for "x-api-key" authentication. Default value is "x-api-key".
+     */
+    public static final ConfigKey<String> NOTIFICATOR_WEBHOOK_API_KEY_HEADER = new StringConfigKey(
+            "notificator.webhook.apiKeyHeader",
+            List.of(KeyType.CONFIG));
+
+    /**
+     * API key value for "x-api-key" authentication.
+     */
+    public static final ConfigKey<String> NOTIFICATOR_WEBHOOK_API_KEY = new StringConfigKey(
+            "notificator.webhook.apiKey",
+            List.of(KeyType.CONFIG));
+
+    /**
+     * Token for "bearer" authentication.
+     */
+    public static final ConfigKey<String> NOTIFICATOR_WEBHOOK_BEARER_TOKEN = new StringConfigKey(
+            "notificator.webhook.bearerToken",
+            List.of(KeyType.CONFIG));
+
+    /**
+     * Username for "basic" authentication.
+     */
+    public static final ConfigKey<String> NOTIFICATOR_WEBHOOK_BASIC_USER = new StringConfigKey(
+            "notificator.webhook.basicUser",
+            List.of(KeyType.CONFIG));
+
+    /**
+     * Password for "basic" authentication.
+     */
+    public static final ConfigKey<String> NOTIFICATOR_WEBHOOK_BASIC_PASSWORD = new StringConfigKey(
+            "notificator.webhook.basicPassword",
+            List.of(KeyType.CONFIG));
+
+    /**
+     * Header name for "custom" authentication.
+     */
+    public static final ConfigKey<String> NOTIFICATOR_WEBHOOK_CUSTOM_HEADER = new StringConfigKey(
+            "notificator.webhook.customHeader",
+            List.of(KeyType.CONFIG));
+
+    /**
+     * Header value for "custom" authentication.
+     */
+    public static final ConfigKey<String> NOTIFICATOR_WEBHOOK_CUSTOM_VALUE = new StringConfigKey(
+            "notificator.webhook.customValue",
+            List.of(KeyType.CONFIG));
+
+    /**
      * Enable user expiration email notification.
      */
     public static final ConfigKey<Boolean> NOTIFICATION_EXPIRATION_USER = new BooleanConfigKey(
